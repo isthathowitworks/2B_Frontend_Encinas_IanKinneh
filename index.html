@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasabuy - Shop Smarter Together</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="modern-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Logo pasabuy.jpg" alt="Pasabuy Logo" class="logo-image"></a>
+                <a href="index.html"><h1>Pasabuy</h1></a> <!-- Wrapped in anchor tag -->
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#buy">Buy</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#request">Request Items</a></li>
+                <!-- Removed Community link -->
+                <li><a href="javascript:void(0);" onclick="openModal()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Logo pasabuy.jpg" alt="Pasabuy Logo" class="logo-image">
+                <h1>Pasabuy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#buy">Buy</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#request">Request Items</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="#search"><i class="fas fa-search"></i></a>
+                <a href="#requests"><i class="fas fa-hand-holding-heart"></i></a>
+                <a href="#cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+    </header> -->
+
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Shopping Made Easier Together!</h1>
+            <p>Buy, Sell, and Request Items Effortlessly!</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Buy Items</h3>
+                    <p>Browse and purchase items from trusted sellers in your.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Sell Items</h3>
+                    <p>Start your online business and reach more customers.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Request Items</h3>
+                    <p>Can't find what you need? Make a request and let sellers help you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Popular Items Section -->
+        <section class="popular-items">
+            <h2>Popular Items</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product.avif" alt="Product 1" class="product-image">
+                    <h3>LOWII Frameset</h3>
+                    <p class="price">₱49,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Maria S.</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <!-- Additional product cards -->
+                <div class="product-card">
+                    <img src="engine11.jpg" alt="Product 2" class="product-image">
+                    <h3>Engine 11 Frameset</h3>
+                    <p class="price">₱30,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Michael O.</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="bxt_11zon.jpg" alt="Product 3" class="product-image">
+                    <h3>BXT Frameset</h3>
+                    <p class="price">₱25,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Anna K.</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="skream.jpg" alt="Product 4" class="product-image">
+                    <h3>Skream Frameset</h3>
+                    <p class="price">₱20,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Chris P.</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="shukaku.jpg" alt="Product 5" class="product-image">
+                    <h3>Shukaku Frameset</h3>
+                    <p class="price">₱15,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Fixie Shop</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="tsunami.jpg" alt="Product 6" class="product-image">
+                    <h3>Tsunami Frameset</h3>
+                    <p class="price">₱10,000.00</p>
+                    <div class="seller-info">
+                        <img src="profile picture.png" alt="Seller Avatar" class="seller-avatar">
+                        <span class="seller-name">Tom H.</span>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="see-more-container2">
+                <button class="see-more-button2">See More</button>
+            </div>
+        </section>
+
+    <!-- Active Requests Section -->
+    <section class="active-requests">
+        <h2>Active Requests</h2>
+        <div class="request-grid">
+            <div class="request-card">
+                <div class="request-header">
+                    <img src="profile picture.png" alt="User Avatar" class="user-avatar">
+                    <span class="username">John D.</span>
+                </div>
+                <p class="request-text">Looking for vintage vinyl records from the 70s.</p>
+                <div class="request-footer">
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> Manila</span>
+                    <button class="help-button">I Can Help</button>
+                </div>
+            </div>
+            <!-- Add more request cards -->
+        </div>
+        <div class="see-more-container1">
+            <button class="see-more-button1">See More</button>
+        </div>
+    </section>
+
+
+        <!-- Features Section -->
+        <!-- <section class="features">
+            <h2>How Pasabuy Works</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Buy Items</h3>
+                    <p>Browse and purchase items from trusted sellers in your.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-store"></i>
+                    <h3>Sell Items</h3>
+                    <p>Start your online business and reach more customers.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <h3>Request Items</h3>
+                    <p>Can't find what you need? Make a request and let sellers help you.</p>
+                </div>
+            </div>
+        </section> -->
+
+    <!-- Community Section -->
+    <!-- <section class="community">
+        <h2>Join Our Growing Community</h2>
+        <div class="stats">
+            <div class="stat-card">
+                <h3>10k+</h3>
+                <p>Active Users</p>
+            </div>
+            <div class="stat-card">
+                <h3>5k+</h3>
+                <p>Successful Trades</p>
+            </div>
+            <div class="stat-card">
+                <h3>2k+</h3>
+                <p>Daily Requests</p>
+            </div>
+        </div>
+    </section> -->
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Pasabuy</h3>
+                <p>Making shopping more accessible for everyone through community-driven commerce!</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#safety">Safety Guidelines</a></li>
+                    <li><a href="#terms">Terms & Conditions</a></li>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: support@pasabuy.com</p>
+                <p>Phone: +63123456789</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pasabuy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

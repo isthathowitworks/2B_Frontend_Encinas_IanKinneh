@@ -1,0 +1,650 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none; /* Removes underline from the text */
+}
+
+.logo-image {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 15px; /* Space between the logo and the text */
+    border-radius: 50%;
+}
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Changed from sticky to fixed */
+    top: 0;
+    width: 100%; /* Ensure the navbar spans the full width */
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 28px; /* Larger font size for logo text */
+    color: #333; /* White text for contrast */
+    margin-left: 15px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Increased gap for better spacing */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* White text for links */
+    font-weight: 600; /* Bolder font weight */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #008B8B; /* Red hover effect */
+}
+
+
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.nav-icons a {
+    color: #333;
+    font-size: 19.2px;
+    transition: color 0.3s;
+}
+
+.nav-icons a:hover {
+    color: #008B8B;
+} */
+
+/* Hero Section */
+.hero {
+    height: 640px;
+    background: linear-gradient(135deg, #008B8B, #D3D3D3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; 
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.hero-buttons .cta-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px; /* Add horizontal margin to create space between buttons */
+    margin-top: 80px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-buttons .cta-button:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+}
+
+.hero-buttons .cta-button.secondary {
+    background-color: #fff;
+}
+
+.hero-buttons .cta-button.secondary:hover {
+    background-color: #3a5bcc;
+}
+
+.hero-buttons .cta-button.tertiary {
+    background-color: #fff;
+}
+
+.hero-buttons .cta-button.tertiary:hover {
+    background-color: #3acc6b;
+}
+
+/* Features Section */
+.features {
+    padding: 64px 5%;
+    background-color: #fff;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    justify-content: center; /* Centers the items horizontally */
+    gap: 50px; /* Space between items */
+    margin-top: 80px;
+    color: #333;
+}
+
+.feature-card {
+    background: #f9f9f9;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    width: 350px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+}
+
+/* .feature-card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+} */
+
+.feature-card i {
+    font-size: 32px;
+    margin-bottom: 16px;
+    color: #008B8B;
+}
+
+.feature-card p {
+    margin-top: 10px;
+}
+
+/* Active Requests Section */
+.active-requests {
+    padding: 64px 5%;
+    background-color: #f4f4f9;
+}
+
+.request-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 32px;
+}
+
+.request-card {
+    background: linear-gradient(135deg, #f9f9f9);
+    padding: 24px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    min-height: 150px;
+}
+
+.request-card:hover {
+}
+
+.request-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.request-header .user-avatar {
+    width: 50px; /* Larger avatar for emphasis */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.request-text {
+    margin-left: 20px;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 1.1em; /* Slightly larger text for readability */
+    color: #333; /* Darker text for contrast */
+}
+
+.request-footer {
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.help-button {
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px; /* Larger button for better interaction */
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.help-button:hover {
+    background-color: #006666; /* Darker shade on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Help Section */
+/* Popular Items Section */
+.popular-items {
+    padding: 64px 5%;
+    background-color: #ffffff;
+}
+
+.seller-info {
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center items horizontally */
+}
+
+.seller-avatar {
+    width: 50px !important; /* Set the width */
+    height: 50px !important; /* Set the height */
+    border-radius: 50% !important; /* Keep the image circular */
+    margin-right: 10px !important; /* Space between the avatar and the text */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    margin-top: 32px;
+}
+
+/* in the product*/
+.product-card {
+    background: #f4f4f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+   transition: transform 0.3s;
+} 
+
+.product-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.product-image   {
+    width: 200px !important; /* Set the width */
+    height: 200px !important; /* Set the height */
+}
+
+.price {
+    color: #008B8B;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.add-to-cart {
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #5da7a7;
+}
+
+.see-more-container1 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.see-more-button1 {
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    height: 40px;
+    width: 100px;
+}
+
+.see-more-button1:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.see-more-container2 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.see-more-button2 {
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    transition: transform 0.3s;
+    height: 40px;
+    width: 100px;
+}
+
+.see-more-button2:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Community Section */
+.community {
+    padding: 64px 5%;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */   
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 48px 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+}
+
+.footer-section h3 {
+    margin-bottom: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #008B8B;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+}
+
+/*Log IN page*/
+/*Log IN page*/
+.body2 {
+    font-family: 'Roboto', sans-serif; /* Consistent font */
+    background: linear-gradient(135deg, #008B8B, #f4f4f9); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border-radius: 16px; /* More rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+    color: #008B8B;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px; /* Larger font size */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px; /* Larger padding */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* More rounded corners */
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #008B8B;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px; /* Larger padding */
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+@keyframes modalFadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Start slightly below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+@keyframes modalFadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0); /* Start at the original position */
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px); /* End slightly below */
+    }
+}
+ 
+.modal.fade-out {
+    animation: modalFadeOutDown 0.3s ease-out; /* Apply the fade-out animation */
+}
+
+
+.modal-content {
+    position: relative; /* Set relative positioning for the modal content */
+    background-color: #fff;
+    margin: 10% auto; /* Reduced margin to make the modal appear larger */
+    padding: 40px 30px; /* Increased padding for more height */
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: modalFadeInUp 0.3s ease-out; /* Apply the animation */
+}
+
+.close-button {
+    position: absolute; /* Position the button absolutely within the modal */
+    top: 10px; /* Position from the top */
+    right: 20px; /* Position from the right */
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    font-size: 28px; /* Increased font size for the heading */
+    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.modal-content p {
+    font-size: 18px; /* Increased font size for paragraph text */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.open-modal-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #008B8B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.open-modal-button:hover {
+    background-color: #006666;
+    transform: scale(1.05);
+}
